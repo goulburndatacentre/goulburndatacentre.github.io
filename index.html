@@ -3,21 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goulburn 1GW Green Digital Infrastructure Campus | Freehold Site Opportunity</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Goulburn Data Centre | 1GW Strategic Digital Infrastructure Campus</title>
+    
+    <!-- Meta Description & SEO -->
+    <meta name="description" content="A 100-hectare regional digital infrastructure platform in the Sydney–Canberra corridor targeting a 1GW strategic capacity with 330kV transmission corridor proximity.">
+    <meta name="keywords" content="Goulburn Data Centre, 1GW Strategic Target, 100 Ha Land Platform, Sydney Canberra Corridor, 330kV Transmission Corridor, AI Compute Campus NSW, Hyperscale Joint Venture">
+    <meta name="author" content="Goulburn Data Centre Platform">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goulburndatacentre.github.io/">
+    <meta property="og:title" content="Goulburn Data Centre | 1GW Strategic Campus Platform">
+    <meta property="og:description" content="100-Hectare Regional Land Platform targeting 1GW strategic capacity along major 330kV transmission corridors in Goulburn, NSW.">
+    <meta property="og:site_name" content="Goulburn Data Centre Platform">
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": "Goulburn Data Centre Strategic Campus Platform",
+      "description": "100-Hectare strategic regional digital infrastructure land platform targeted for up to 1GW phased hyperscale and AI compute development.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Goulburn Strategic Infrastructure Precinct",
+        "addressLocality": "Goulburn",
+        "addressRegion": "NSW",
+        "postalCode": "2580",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.7431",
+        "longitude": "149.7390"
+      }
+    }
+    </script>
+
     <style>
         :root {
-            --bg-dark: #0A0F1D;
-            --bg-card: #131B2E;
-            --bg-card-hover: #1A253E;
+            --bg-dark: #090D16;
+            --bg-card: #111827;
+            --bg-card-hover: #1F2937;
+            --accent-cyan: #06B6D4;
+            --accent-blue: #2563EB;
             --accent-green: #10B981;
-            --accent-blue: #3B82F6;
-            --text-main: #F3F4F6;
+            --accent-amber: #F59E0B;
+            --accent-glow: rgba(6, 182, 212, 0.12);
+            --text-main: #F9FAFB;
             --text-muted: #9CA3AF;
-            --border-color: #23314E;
-            --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --border-color: #1F2937;
+            --border-highlight: #374151;
         }
 
         * {
@@ -27,11 +63,11 @@
         }
 
         body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-main);
-            font-family: var(--font-family);
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
         .container {
@@ -40,376 +76,1119 @@
             padding: 0 24px;
         }
 
-        /* Header / Hero */
+        /* Navigation */
         header {
-            padding: 32px 0;
             border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            background-color: rgba(9, 13, 22, 0.94);
+            backdrop-filter: blur(12px);
+            z-index: 100;
         }
 
-        .logo-area {
+        .nav-inner {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            height: 72px;
         }
 
         .brand-title {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
             letter-spacing: -0.02em;
-            color: #FFF;
         }
 
         .brand-badge {
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--accent-green);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #FFFFFF;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .btn-contact {
+            padding: 10px 20px;
+            background-color: var(--accent-cyan);
+            color: #090D16;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-contact:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Hero Section */
         .hero {
-            padding: 80px 0 60px;
+            padding: 85px 0 50px;
             text-align: center;
+            background: radial-gradient(circle at 50% 20%, var(--accent-glow) 0%, transparent 65%);
         }
 
         .hero-tag {
-            color: var(--accent-green);
-            font-size: 0.95rem;
-            font-weight: 600;
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            background-color: rgba(6, 182, 212, 0.08);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-bottom: 22px;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 16px;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.15;
+            font-size: 3.4rem;
+            font-weight: 900;
+            line-height: 1.1;
             letter-spacing: -0.03em;
-            margin-bottom: 24px;
-            background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+            margin-bottom: 14px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #D1D5DB 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 800px;
-            margin: 0 auto 40px;
+        .hero-sub {
+            font-size: 1.35rem;
+            color: var(--accent-cyan);
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
         }
 
-        /* Grid Metrics */
-        .metrics-grid {
+        .hero p.lead-desc {
+            font-size: 1.08rem;
+            color: var(--text-muted);
+            max-width: 880px;
+            margin: 0 auto 30px;
+            line-height: 1.65;
+        }
+
+        .disclaimer-box {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            max-width: 880px;
+            margin: 0 auto 36px;
+            border-left: 3px solid var(--accent-cyan);
+            padding: 12px 18px;
+            text-align: left;
+            background-color: rgba(17, 24, 39, 0.6);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn-outline {
+            padding: 12px 24px;
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-highlight);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        /* Metric Grid */
+        .metric-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 20px;
-            margin-bottom: 80px;
+            margin: 40px 0 60px;
         }
 
         .metric-card {
-            background: var(--bg-card);
+            background-color: var(--bg-card);
             border: 1px solid var(--border-color);
-            padding: 24px;
+            padding: 26px 18px;
             border-radius: 12px;
-            transition: transform 0.2s, border-color 0.2s;
+            text-align: center;
+            position: relative;
         }
 
-        .metric-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-blue);
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
         }
 
-        .metric-value {
-            font-size: 2rem;
+        .metric-val {
+            font-size: 1.85rem;
             font-weight: 800;
-            color: var(--accent-green);
-            margin-bottom: 8px;
+            color: var(--text-main);
+            margin-bottom: 4px;
         }
 
         .metric-label {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            font-weight: 600;
         }
 
-        /* Content Sections */
-        .section-title {
-            font-size: 2rem;
+        /* Scalable Roadmap Banner */
+        .roadmap-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 80px;
+        }
+
+        .roadmap-title {
+            font-size: 1.15rem;
             font-weight: 700;
-            margin-bottom: 32px;
+            margin-bottom: 22px;
+            text-align: center;
+            color: var(--text-main);
+            letter-spacing: -0.01em;
+        }
+
+        .roadmap-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .roadmap-step {
+            background-color: rgba(9, 13, 22, 0.6);
+            border: 1px solid var(--border-highlight);
+            border-radius: 8px;
+            padding: 22px 16px;
             text-align: center;
         }
 
-        .highlights-grid {
+        .roadmap-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .roadmap-capacity {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 4px;
+        }
+
+        .roadmap-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* Visual Site Advantage Matrix */
+        .site-matrix {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 36px;
+            margin-bottom: 80px;
+        }
+
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .matrix-item {
+            background-color: rgba(9, 13, 22, 0.7);
+            border: 1px solid var(--border-highlight);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .matrix-item-title {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .matrix-item-desc {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* Site Location Section & SVG Map */
+        .location-section {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 36px;
+            margin-bottom: 80px;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .location-details-list {
+            list-style: none;
+        }
+
+        .location-details-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .location-details-list li:last-child {
+            border-bottom: none;
+        }
+
+        .loc-label {
+            color: var(--text-muted);
+        }
+
+        .loc-val {
+            font-weight: 600;
+            color: var(--text-main);
+            text-align: right;
+        }
+
+        .map-wrapper {
+            background-color: #0B0F19;
+            border: 1px solid var(--border-highlight);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .svg-map-container {
+            width: 100%;
+            height: 330px;
+            background-color: #060911;
+            border-radius: 6px;
+            border: 1px solid #1E293B;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Common Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-header h2 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* Card Layouts */
+        .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 24px;
             margin-bottom: 80px;
         }
 
-        .highlight-card {
-            background: var(--bg-card);
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
             border: 1px solid var(--border-color);
-            padding: 32px;
             border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
         }
 
-        .highlight-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
-            color: #FFF;
+        .card:hover {
+            border-color: var(--border-highlight);
         }
 
-        .highlight-card p {
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 14px;
         }
 
-        /* Contact Section */
-        .contact-section {
-            background: var(--bg-card);
+        .card-list {
+            list-style: none;
+        }
+
+        .card-list li {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .card-list li::before {
+            content: '•';
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        /* Deal Structure & JV Model Section */
+        .deal-structure-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--accent-blue);
+            border-radius: 12px;
+            padding: 36px;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .deal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .deal-box {
+            background-color: rgba(9, 13, 22, 0.7);
+            border: 1px solid var(--border-highlight);
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .deal-box h4 {
+            font-size: 1.1rem;
+            color: var(--accent-cyan);
+            margin-bottom: 14px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Status Pills */
+        .status-pill {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-completed {
+            background-color: rgba(16, 185, 129, 0.12);
+            color: var(--accent-green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-next {
+            background-color: rgba(245, 158, 11, 0.12);
+            color: var(--accent-amber);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .status-target {
+            background-color: rgba(6, 182, 212, 0.12);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        /* What We Are Seeking Matrix */
+        .seeking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 80px;
+        }
+
+        .seeking-card {
+            background-color: rgba(17, 24, 39, 0.7);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 48px;
-            max-width: 800px;
-            margin: 0 auto 80px;
+            border-radius: 10px;
+            padding: 24px;
+            position: relative;
         }
 
-        .contact-header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .contact-header h2 {
-            font-size: 1.8rem;
+        .seeking-card h4 {
+            font-size: 1.05rem;
+            color: var(--accent-cyan);
             margin-bottom: 8px;
         }
 
-        .contact-header p {
+        .seeking-card p {
+            font-size: 0.86rem;
             color: var(--text-muted);
+        }
+
+        /* Data Room NDA Banner */
+        .dataroom-banner {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .dataroom-text h3 {
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            margin-bottom: 6px;
+        }
+
+        .dataroom-text p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Contact & Formspree */
+        .contact-section {
+            background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-dark) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 50px 30px;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 650px;
+            margin: 32px auto 0;
+            text-align: left;
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
-            margin-bottom: 16px;
         }
 
         .form-group {
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
             display: block;
             font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text-main);
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            font-weight: 500;
         }
 
         .form-control {
             width: 100%;
-            padding: 12px 16px;
-            background: var(--bg-dark);
+            padding: 12px 14px;
+            background-color: var(--bg-dark);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: #FFF;
-            font-family: inherit;
-            font-size: 0.95rem;
-            transition: border-color 0.2s;
+            border-radius: 6px;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s ease;
         }
 
         .form-control:focus {
-            outline: none;
-            border-color: var(--accent-blue);
+            border-color: var(--accent-cyan);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%9CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
         }
 
         textarea.form-control {
-            min-height: 120px;
             resize: vertical;
+            height: 110px;
         }
 
         .btn-submit {
             width: 100%;
-            padding: 14px 24px;
-            background: linear-gradient(135deg, var(--accent-green) 0%, #059669 100%);
-            color: #FFF;
+            padding: 14px;
+            background-color: var(--accent-cyan);
+            color: #090D16;
+            font-weight: 700;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
+            border-radius: 6px;
+            font-size: 0.95rem;
             cursor: pointer;
-            transition: opacity 0.2s;
+            transition: all 0.2s ease;
         }
 
         .btn-submit:hover {
             opacity: 0.9;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
         }
 
         /* Footer */
         footer {
             border-top: 1px solid var(--border-color);
-            padding: 32px 0;
+            padding: 40px 0;
             text-align: center;
+            font-size: 0.82rem;
             color: var(--text-muted);
-            font-size: 0.85rem;
         }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
             .form-row { grid-template-columns: 1fr; }
-            .contact-section { padding: 24px; }
+            .location-grid, .deal-grid { grid-template-columns: 1fr; }
+            .dataroom-banner { flex-direction: column; text-align: center; }
+            .contact-section { padding: 30px 16px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header / Navigation -->
     <header>
-        <div class="container logo-area">
-            <div class="brand-title">GOULBURN DIGITAL INFRASTRUCTURE</div>
-            <div class="brand-badge">1GW Green Platform</div>
+        <div class="container nav-inner">
+            <div class="brand-title">
+                Goulburn Data Centre
+                <span class="brand-badge">1GW Campus</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#advantage">Campus Advantage</a></li>
+                <li><a href="#location">Site Location</a></li>
+                <li><a href="#deal">Investment Opportunity</a></li>
+                <li><a href="#power">Power Pathway</a></li>
+                <li><a href="#status">Project Status</a></li>
+                <li><a href="#seeking">Partnership Matrix</a></li>
+            </ul>
+            <a href="#contact" class="btn-contact">Inquire Opportunity</a>
         </div>
     </header>
 
+    <!-- Main Container -->
     <main class="container">
+
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-tag">Strategic Land & Energy Gateway</div>
-            <h1>Goulburn 1GW Green Digital Infrastructure Campus</h1>
-            <p>An 8.43-hectare prime freehold property strategic opportunity in Goulburn, NSW. Ideally positioned along key high-voltage energy corridor and high-capacity carrier optical fiber networks to support next-generation Hyperscale Data Centres and AI Workloads.</p>
-        </section>
+            <span class="hero-tag">Regional Digital Infrastructure Campus</span>
+            <h1>GOULBURN DATA CENTRE<br>1GW STRATEGIC TARGET</h1>
+            <div class="hero-sub">100 Ha Regional Digital Infrastructure Land Platform</div>
+            
+            <p class="lead-desc">
+                A strategically positioned 100-hectare land platform in the Sydney–Canberra corridor, seeking joint venture development, capital, energy, and hyperscale partners to execute an initial 100MW+ development pathway leading toward a 1GW-scale regional digital infrastructure campus.
+            </p>
 
-        <!-- Key Metrics -->
-        <section class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-value">1GW Target</div>
-                <div class="metric-label">Scaled Campus Vision</div>
+            <div class="disclaimer-box">
+                <strong>Strategic Target Notice:</strong> The 1GW-scale target, long-term development pathway, 330kV transmission proximity, and planning frameworks represent preliminary desktop assessments and strategic target pathways. All grid connections and capacities are subject to formal Network Service Provider (NSP) studies, system impact assessments, and statutory approvals.
             </div>
-            <div class="metric-card">
-                <div class="metric-value">8.43 Ha</div>
-                <div class="metric-label">Freehold Land Area</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">33kV / 330kV</div>
-                <div class="metric-label">Essential Energy & TransGrid Access</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">Strategic</div>
-                <div class="metric-label">Sydney-Canberra Tech Corridor</div>
+
+            <div class="hero-cta">
+                <a href="#contact" class="btn-contact" style="padding: 12px 28px;">Request Partner Briefing</a>
+                <a href="#deal" class="btn-outline">View Deal Structure</a>
             </div>
         </section>
 
-        <!-- Core Highlights -->
-        <h2 class="section-title">Strategic Infrastructure Highlights</h2>
-        <section class="highlights-grid">
-            <div class="highlight-card">
-                <h3>Power & Grid Access</h3>
-                <p>Adjacent to Essential Energy’s 33kV distribution network (GOU42 feeder) and close to TransGrid’s dual 330kV high-voltage transmission corridor, providing scalable power pathway for massive digital loads.</p>
+        <!-- Metric Grid -->
+        <section class="metric-grid">
+            <div class="metric-card">
+                <div class="metric-val">1GW</div>
+                <div class="metric-label">Strategic Capacity Target</div>
             </div>
-            <div class="highlight-card">
-                <h3>Fiber & Connectivity</h3>
-                <p>Direct proximity to major carrier pit and duct infrastructure along Sydney Road, enabling redundant, low-latency enterprise fiber connections from Telstra, Optus, Vocus, and NBN Co.</p>
+            <div class="metric-card">
+                <div class="metric-val">100 Ha</div>
+                <div class="metric-label">Strategic Land Platform</div>
             </div>
-            <div class="highlight-card">
-                <h3>Strategic Location</h3>
-                <p>Positioned along the key industrial corridor in Goulburn NSW, providing ideal geographic isolation with optimal proximity to Sydney hyperscale availability zones.</p>
+            <div class="metric-card">
+                <div class="metric-val">330 kV</div>
+                <div class="metric-label">Transmission Infrastructure Proximity</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-val">100MW+</div>
+                <div class="metric-label">Initial Development Pathway</div>
             </div>
         </section>
 
-        <!-- Formspree AJAX Contact Form -->
-        <section class="contact-section">
-            <div class="contact-header">
-                <h2>Partner & Investor Inquiry</h2>
-                <p>Connect with the land ownership and project development management to discuss partnerships, site acquisition, or joint development opportunities.</p>
+        <!-- Scalable Capacity Development Pathway Banner -->
+        <section class="roadmap-container">
+            <div class="roadmap-title">Phased Capacity Development Pathway</div>
+            <div class="roadmap-steps">
+                <div class="roadmap-step">
+                    <div class="roadmap-badge">Phase 1 Target</div>
+                    <div class="roadmap-capacity">100MW+</div>
+                    <div class="roadmap-desc">Initial Anchor Infrastructure Facility</div>
+                </div>
+                <div class="roadmap-step">
+                    <div class="roadmap-badge">Phase 2 Expansion</div>
+                    <div class="roadmap-capacity">250MW+</div>
+                    <div class="roadmap-desc">High-Density AI & Compute Expansion</div>
+                </div>
+                <div class="roadmap-step">
+                    <div class="roadmap-badge">Phase 3 Campus</div>
+                    <div class="roadmap-capacity">500MW</div>
+                    <div class="roadmap-desc">Regional Hyperscale Hub Scaling</div>
+                </div>
+                <div class="roadmap-step">
+                    <div class="roadmap-badge">Long-Term Vision</div>
+                    <div class="roadmap-capacity">1GW Horizon</div>
+                    <div class="roadmap-desc">Ultra-Scale Strategic Campus Target</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Site Advantage Grid -->
+        <section class="site-matrix" id="advantage">
+            <div class="section-header" style="margin-bottom: 24px;">
+                <h2>Core Platform Advantages</h2>
+                <p>Combining multi-hundred hectare land scalability, major high-voltage transmission proximity, and primary intercity transport corridors.</p>
             </div>
 
-            <!-- Formspree Success/Error Alert Containers -->
-            <div data-fs-success style="display:none; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--accent-green); color: var(--accent-green); padding: 16px; border-radius: 8px; font-weight: 600; margin-bottom: 20px; text-align: center;">
-                Thanks for your submission! We will review your inquiry and get back to you shortly.
-            </div>
-            <div data-fs-error style="display:none; background: rgba(239, 68, 68, 0.1); border: 1px solid #EF4444; color: #EF4444; padding: 16px; border-radius: 8px; font-weight: 600; margin-bottom: 20px; text-align: center;">
-                Oops! There was a problem submitting your form. Please check your fields and try again.
-            </div>
-
-            <form id="my-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name / Title *</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="e.g. David Miller, Managing Director" data-fs-field required>
-                        <span data-fs-error="name" style="color: #EF4444; font-size: 0.8rem; margin-top: 4px; display: block;"></span>
+            <div class="matrix-grid">
+                <div class="matrix-item">
+                    <div class="matrix-item-title">
+                        <span>100 Ha Land Platform</span>
                     </div>
-                    <div class="form-group">
-                        <label for="company">Company / Entity *</label>
-                        <input type="text" id="company" name="company" class="form-control" placeholder="e.g. Nexus Digital Infrastructure" data-fs-field required>
-                        <span data-fs-error="company" style="color: #EF4444; font-size: 0.8rem; margin-top: 4px; display: block;"></span>
+                    <div class="matrix-item-desc">
+                        Secured strategic footprint engineered for long-term scalability, accommodating multi-stage hyperscale halls, energy storage (BESS), and high-voltage substation yards.
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Corporate Email *</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="d.miller@nexuscap.com" data-fs-field required>
-                        <span data-fs-error="email" style="color: #EF4444; font-size: 0.8rem; margin-top: 4px; display: block;"></span>
+                <div class="matrix-item">
+                    <div class="matrix-item-title">
+                        <span>Major 330 kV Transmission Lines</span>
                     </div>
+                    <div class="matrix-item-desc">
+                        Positioned near major Transgrid 330 kV transmission infrastructure (~6 km Collector–Marulan / ~10 km Yass–Marulan corridors), creating a potential pathway for future high-capacity grid connection.
+                    </div>
+                </div>
+
+                <div class="matrix-item">
+                    <div class="matrix-item-title">
+                        <span>Sydney–Canberra Transport Axis</span>
+                    </div>
+                    <div class="matrix-item-desc">
+                        Direct regional road access to the Hume Highway corridor, providing low-latency link between Sydney's primary cloud nodes and Canberra's federal digital sector.
+                    </div>
+                </div>
+
+                <div class="matrix-item">
+                    <div class="matrix-item-title">
+                        <span>Phased 1GW Capacity Horizon</span>
+                    </div>
+                    <div class="matrix-item-desc">
+                        Structured development timeline beginning at 100MW+ and scaling systematically through 250MW+ and 500MW up to the 1GW strategic campus target.
+                    </div>
+                </div>
+
+                <div class="matrix-item">
+                    <div class="matrix-item-title">
+                        <span>AI Compute & BESS Integration</span>
+                    </div>
+                    <div class="matrix-item-desc">
+                        Campus layout optimized for high-density liquid-cooled AI cluster deployment and co-located Battery Energy Storage Systems (BESS) for grid stability.
+                    </div>
+                </div>
+
+                <div class="matrix-item">
+                    <div class="matrix-item-title">
+                        <span>Strategic Council Alignment</span>
+                    </div>
+                    <div class="matrix-item-desc">
+                        Situated within the Goulburn Mulwaree LGA, with preliminary strategic planning and industrial infrastructure pathways under active review.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Site Location Section & SVG Map -->
+        <section class="location-section" id="location">
+            <div class="section-header" style="margin-bottom: 32px;">
+                <h2>Strategic Site Location & Infrastructure Context</h2>
+                <p>Key site positioning parameters, regional infrastructure alignment, and high-voltage transmission corridors.</p>
+            </div>
+
+            <div class="location-grid">
+                <div>
+                    <ul class="location-details-list">
+                        <li>
+                            <span class="loc-label">Strategic Campus Location</span>
+                            <span class="loc-val">Goulburn Infrastructure Precinct, NSW</span>
+                        </li>
+                        <li>
+                            <span class="loc-label">Land Footprint Target</span>
+                            <span class="loc-val">100 Hectares (Regional Campus)</span>
+                        </li>
+                        <li>
+                            <span class="loc-label">Geographic Alignment</span>
+                            <span class="loc-val">Sydney–Canberra Infrastructure Corridor</span>
+                        </li>
+                        <li>
+                            <span class="loc-label">Road Transport Access</span>
+                            <span class="loc-val">Regional road access to Hume Highway corridor</span>
+                        </li>
+                        <li>
+                            <span class="loc-label">Primary Transmission (Collector–Marulan)</span>
+                            <span class="loc-val">330 kV Line (~6 km Desktop Assessment)</span>
+                        </li>
+                        <li>
+                            <span class="loc-label">Secondary Transmission (Yass–Marulan)</span>
+                            <span class="loc-val">330 kV Line (~10 km Desktop Assessment)</span>
+                        </li>
+                        <li>
+                            <span class="loc-label">Municipal Authority</span>
+                            <span class="loc-val">Goulburn Mulwaree Council (LGA)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="map-wrapper">
+                    <div style="font-weight: 700; color: var(--accent-cyan); margin-bottom: 12px; font-size: 1rem;">
+                        Regional High-Voltage Infrastructure Topology
+                    </div>
+                    
+                    <div class="svg-map-container">
+                        <svg width="100%" height="100%" viewBox="0 0 500 330" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Grid Lines -->
+                            <defs>
+                                <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+                                    <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#1E293B" stroke-width="0.5"/>
+                                </pattern>
+                            </defs>
+                            <rect width="100%" height="100%" fill="url(#grid)" />
+
+                            <!-- Infrastructure Axis: Sydney - Canberra Corridor (Hume Highway Axis) -->
+                            <path d="M 50 290 L 220 180 L 450 40" fill="none" stroke="#374151" stroke-width="8" stroke-linecap="round"/>
+                            <path d="M 50 290 L 220 180 L 450 40" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6,4"/>
+                            <text x="360" y="75" fill="#9CA3AF" font-size="10" font-weight="bold" transform="rotate(-30 360 75)">Hume Hwy Corridor</text>
+
+                            <!-- Collector-Marulan 330kV Line -->
+                            <path d="M 70 50 L 210 160 L 430 280" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="5,2"/>
+                            <text x="95" y="75" fill="#F59E0B" font-size="9" font-weight="bold">Collector-Marulan 330kV (~6km)</text>
+
+                            <!-- Yass-Marulan 330kV Line -->
+                            <path d="M 40 120 L 240 210 L 460 300" fill="none" stroke="#D97706" stroke-width="2" stroke-dasharray="4,3"/>
+                            <text x="60" y="140" fill="#D97706" font-size="8">Yass-Marulan 330kV (~10km)</text>
+
+                            <!-- Core Nodes -->
+                            <!-- Sydney Hub -->
+                            <circle cx="450" cy="40" r="7" fill="#06B6D4" />
+                            <text x="415" y="28" fill="#FFFFFF" font-size="11" font-weight="bold">Sydney Hub (~190km)</text>
+
+                            <!-- Canberra Hub -->
+                            <circle cx="50" cy="290" r="7" fill="#06B6D4" />
+                            <text x="60" y="305" fill="#FFFFFF" font-size="11" font-weight="bold">Canberra (~90km)</text>
+
+                            <!-- Goulburn CBD -->
+                            <circle cx="200" cy="190" r="5" fill="#9CA3AF" />
+                            <text x="140" y="195" fill="#D1D5DB" font-size="10">Goulburn CBD</text>
+
+                            <!-- TARGET SITE: Goulburn 1GW Campus -->
+                            <circle cx="220" cy="180" r="16" fill="rgba(6, 182, 212, 0.25)" />
+                            <circle cx="220" cy="180" r="8" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2" />
+                            
+                            <!-- Site Callout Box -->
+                            <rect x="235" y="145" width="180" height="42" rx="4" fill="#111827" stroke="#06B6D4" stroke-width="1.5" />
+                            <text x="243" y="162" fill="#06B6D4" font-size="10" font-weight="bold">Goulburn 1GW Campus Site</text>
+                            <text x="243" y="177" fill="#9CA3AF" font-size="9">100 Ha | 330kV Proximity</text>
+                        </svg>
+                    </div>
+
+                    <div style="margin-top: 14px; font-size: 0.78rem; color: var(--text-muted); font-style: italic;">
+                        * Conceptual regional infrastructure diagram. Distances are based on preliminary desktop assessment and subject to formal network and connection studies. Detailed GIS overlays available under NDA.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Opportunity & Deal Structure Section -->
+        <section id="deal">
+            <div class="section-header">
+                <h2>Investment Opportunity & Deal Structure</h2>
+                <p>A structured co-development model bringing together site platform control, power connection strategy, and institutional capital.</p>
+            </div>
+
+            <div class="deal-structure-card">
+                <h3 style="font-size: 1.35rem; color: #FFFFFF; margin-bottom: 8px;">Joint Venture (JV) Co-Development Platform</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted);">
+                    The landowner platform offers site control over the strategic 100-hectare regional land footprint in Goulburn. We are inviting experienced developers, energy infrastructure partners, and institutional investors to structure a Joint Venture targeting an initial 100MW+ deployment leading toward a 1GW-scale campus.
+                </p>
+
+                <div class="deal-grid">
+                    <div class="deal-box">
+                        <h4>What the Landowner Brings</h4>
+                        <ul class="card-list">
+                            <li><strong>100 Ha Land Platform:</strong> Unencumbered strategic land footprint in the Sydney–Canberra corridor.</li>
+                            <li><strong>Preliminary Desktop Studies:</strong> Initial GIS overlays, fiber pathway assessments, and 330kV proximity data.</li>
+                            <li><strong>Planning Pathways:</strong> Ongoing engagement with local planning frameworks within Goulburn Mulwaree LGA.</li>
+                            <li><strong>Agile JV Alignment:</strong> Flexible commercial structure structured for developer and capital partnership.</li>
+                        </ul>
+                    </div>
+
+                    <div class="deal-box">
+                        <h4>What We Seek in Partners</h4>
+                        <ul class="card-list">
+                            <li><strong>Data Centre Developer:</strong> Experience in engineering, NSP applications, precinct design, and build-out.</li>
+                            <li><strong>Energy / Power Partner:</strong> Technical capability in 330kV transmission connection, sub-station design, and BESS.</li>
+                            <li><strong>Institutional Capital:</strong> Funding for NSP connection enquiries, formal studies, and capital development.</li>
+                            <li><strong>Anchor Tenants:</strong> Cloud providers, hyperscalers, or AI compute operators seeking multi-MW scale capacity.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Power Infrastructure Pathway -->
+        <section id="power">
+            <div class="section-header">
+                <h2>Power Infrastructure Strategy</h2>
+                <p>Focusing on major 330 kV high-voltage transmission lines to support multi-hundred MW expansion.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Collector–Marulan 330 kV Transmission Corridor</h3>
+                    <p>Primary target corridor for high-capacity, multi-hundred megawatt grid connection.</p>
+                    <ul class="card-list">
+                        <li><strong>Proximity:</strong> Desktop assessment indicates active 330 kV transmission infrastructure located ~6 km from site.</li>
+                        <li><strong>Campus Pathway:</strong> Potential pathway for high-capacity connection, subject to Transgrid connection capacity and network augmentation.</li>
+                        <li><strong>Connection Process:</strong> Requires formal Connection Enquiry, System Impact Studies (SIS), and long-lead transmission planning.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Yass–Marulan 330 kV Transmission Corridor</h3>
+                    <p>Secondary high-voltage transmission route offering regional grid redundancy potential.</p>
+                    <ul class="card-list">
+                        <li><strong>Proximity:</strong> Desktop assessment indicates secondary 330 kV line located ~10 km from site.</li>
+                        <li><strong>Redundancy Target:</strong> Potential for dual-feed or staged capacity expansion across the regional network.</li>
+                        <li><strong>BESS Integration:</strong> Opportunities for integrated large-scale battery storage to support grid stability.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Status & Preliminary Verification -->
+        <section id="status">
+            <div class="section-header">
+                <h2>Project Status & Next Milestones</h2>
+                <p>Transparent progress tracking across key feasibility and development phases.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Site Platform Control</h3>
+                    <div style="margin-bottom: 12px;"><span class="status-pill status-completed">Secured</span></div>
+                    <p>100-hectare strategic regional land footprint secured under platform control in Goulburn, NSW.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Desktop Transmission Evaluation</h3>
+                    <div style="margin-bottom: 12px;"><span class="status-pill status-completed">Completed</span></div>
+                    <p>Desktop identification of ~6km and ~10km 330kV transmission corridors and regional transport alignment.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Formal NSP Grid Application</h3>
+                    <div style="margin-bottom: 12px;"><span class="status-pill status-next">Next Step / Target</span></div>
+                    <p>Formal Connection Enquiry and System Impact Studies with Network Service Providers (Transgrid) to be initiated with JV partners.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Planning Framework Assessment</h3>
+                    <div style="margin-bottom: 12px;"><span class="status-pill status-next">Under Assessment</span></div>
+                    <p>Preliminary local planning strategy and state-significant infrastructure pathways under active evaluation.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Detailed Engineering Studies</h3>
+                    <div style="margin-bottom: 12px;"><span class="status-pill status-target">Next Milestone</span></div>
+                    <p>Execution of geotechnical, civil, water servicing, and environmental impact assessments with development partners.</p>
+                </div>
+
+                <div class="card">
+                    <h3>JV Partner Engagement</h3>
+                    <div style="margin-bottom: 12px;"><span class="status-pill status-target">Active Market Phase</span></div>
+                    <p>Inviting developers, capital funds, energy partners, and hyperscale anchor tenants for confidential JV discussions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Are Seeking (Partnership Matrix) -->
+        <section id="seeking">
+            <div class="section-header">
+                <h2>Partnership Matrix</h2>
+                <p>Key strategic capabilities sought to complete the Joint Venture development platform.</p>
+            </div>
+
+            <div class="seeking-grid">
+                <div class="seeking-card">
+                    <h4>Data Centre Developer</h4>
+                    <p>Operators to lead precinct planning, 330kV connection applications, and facility execution.</p>
+                </div>
+                <div class="seeking-card">
+                    <h4>Development Capital</h4>
+                    <p>Infrastructure funds seeking early-stage partnership in a 1GW-scale strategic digital land platform.</p>
+                </div>
+                <div class="seeking-card">
+                    <h4>Energy & BESS Partners</h4>
+                    <p>Power developers to drive the 330kV grid connection, substation delivery, and storage integration.</p>
+                </div>
+                <div class="seeking-card">
+                    <h4>Anchor Tenants</h4>
+                    <p>Hyperscalers and AI compute providers seeking custom-built, long-term scalable capacity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Room / Due Diligence NDA Banner -->
+        <section class="dataroom-banner">
+            <div class="dataroom-text">
+                <h3>Institutional Due Diligence Data Room Available</h3>
+                <p>Access preliminary GIS mapping layers, cadastral site boundary reports, and transmission corridor notes under NDA.</p>
+            </div>
+            <a href="#contact" class="btn-contact" style="white-space: nowrap; padding: 12px 24px;">Request Data Room NDA</a>
+        </section>
+
+        <!-- Contact Section / Formspree -->
+        <section class="contact-section" id="contact">
+            <h2>Engage with the Landowner Platform</h2>
+            <p>Submit a confidential inquiry to request the partner briefing document or explore joint venture opportunities.</p>
+
+            <div class="form-container">
+                <form action="https://formspree.io/f/xyeydkvk" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name / Title *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="e.g. David Miller, Managing Director" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Entity *</label>
+                            <input type="text" id="company" name="company" class="form-control" placeholder="e.g. Nexus Digital Infrastructure" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Corporate Email *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="d.miller@nexuscap.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="partnership_type">Partnership Type *</label>
+                            <select id="partnership_type" name="partnership_type" class="form-control" required>
+                                <option value="" disabled selected>Select primary role...</option>
+                                <option value="Developer">Data Centre Developer Partner</option>
+                                <option value="Capital">Development Capital / Fund</option>
+                                <option value="Energy">Energy / BESS Partner</option>
+                                <option value="Anchor Tenant">Anchor Tenant / Off-taker</option>
+                                <option value="Adviser / Broker">Adviser / Industry Specialist</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="form-group">
-                        <label for="partnership_type">Partnership Type *</label>
-                        <select id="partnership_type" name="partnership_type" class="form-control" data-fs-field required>
-                            <option value="" disabled selected>Select primary role...</option>
-                            <option value="Developer">Data Centre Developer Partner</option>
-                            <option value="Capital">Development Capital / Fund</option>
-                            <option value="Energy">Energy / BESS Partner</option>
-                            <option value="Anchor Tenant">Anchor Tenant / Off-taker</option>
-                            <option value="Adviser / Broker">Adviser / Industry Specialist</option>
+                        <label for="power_req">Indicative Capacity Focus</label>
+                        <select id="power_req" name="indicative_power" class="form-control">
+                            <option value="Initial 100MW Focus">Phase 1 Target (100MW+ Initial Pathway)</option>
+                            <option value="250MW+ Expansion">Phase 2 Target (250MW+ Scaled)</option>
+                            <option value="500MW Regional Campus">Phase 3 Target (500MW Campus Hub)</option>
+                            <option value="1GW Scale Target">1GW Scale Strategic Vision</option>
                         </select>
-                        <span data-fs-error="partnership_type" style="color: #EF4444; font-size: 0.8rem; margin-top: 4px; display: block;"></span>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="power_req">Indicative Capacity Focus</label>
-                    <select id="power_req" name="indicative_power" class="form-control" data-fs-field>
-                        <option value="Initial 100MW Focus">Phase 1 Target (100MW+ Initial Pathway)</option>
-                        <option value="250MW+ Expansion">Phase 2 Target (250MW+ Scaled)</option>
-                        <option value="500MW Regional Campus">Phase 3 Target (500MW Campus Hub)</option>
-                        <option value="1GW Scale Target">1GW Scale Strategic Vision</option>
-                    </select>
-                    <span data-fs-error="indicative_power" style="color: #EF4444; font-size: 0.8rem; margin-top: 4px; display: block;"></span>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Scope of Interest / Message *</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Please outline your organization's capability and strategic objectives for the Goulburn 1GW platform..." required></textarea>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Scope of Interest / Message *</label>
-                    <textarea id="message" name="message" class="form-control" placeholder="Please outline your organization's capability and strategic objectives for the Goulburn 1GW platform..." data-fs-field required></textarea>
-                    <span data-fs-error="message" style="color: #EF4444; font-size: 0.8rem; margin-top: 4px; display: block;"></span>
-                </div>
-
-                <button type="submit" class="btn-submit" data-fs-submit-btn>Submit Confidential Inquiry</button>
-            </form>
+                    <button type="submit" class="btn-submit">Submit Confidential Inquiry</button>
+                </form>
+            </div>
         </section>
+
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Goulburn Digital Infrastructure Platform. All rights reserved. Confidential Opportunity.</p>
+            <p>&copy; 2026 Goulburn Data Centre Platform. All rights reserved.</p>
+            <p style="margin-top: 8px; font-size: 0.76rem; color: #6B7280;">
+                Disclaimer: This website and associated materials are provided for preliminary discussion purposes only. All capacity targets (including 100MW+ initial, 250MW+, 500MW, and 1GW strategic target), 330kV transmission proximities (~6km Collector-Marulan / ~10km Yass-Marulan), and planning frameworks reflect desktop evaluations and are strictly subject to formal engineering assessments, NSP connection agreements, and statutory planning approvals.
+            </p>
         </div>
     </footer>
 
-    <!-- Formspree AJAX Script Integration -->
-    <script>
-      window.formspree =
-        window.formspree ||
-        function () {
-          (formspree.q = formspree.q || []).push(arguments);
-        };
-      formspree("initForm", {
-        formElement: "#my-form",
-        formId: "xyeydkvk",
-      });
-    </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
