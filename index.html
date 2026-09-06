@@ -1128,26 +1128,36 @@
             <p>Submit a confidential inquiry to request the partner briefing document or explore joint venture opportunities.</p>
 
             <div class="form-container">
-                <form action="https://formspree.io/f/xyeydkvk" method="POST">
+                <div data-fs-success style="display:none; color: #10B981; font-weight: bold; margin-bottom: 16px;">
+                    Thanks for your submission!
+                </div>
+                <div data-fs-error style="display:none; color: #EF4444; font-weight: bold; margin-bottom: 16px;">
+                    Oops! There was a problem submitting your form.
+                </div>
+                
+                <form id="my-form">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name / Title *</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="e.g. David Miller, Managing Director" required>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="e.g. David Miller, Managing Director" data-fs-field required>
+                            <span data-fs-error="name" style="color: #EF4444; font-size: 0.8rem;"></span>
                         </div>
                         <div class="form-group">
                             <label for="company">Company / Entity *</label>
-                            <input type="text" id="company" name="company" class="form-control" placeholder="e.g. Nexus Digital Infrastructure" required>
+                            <input type="text" id="company" name="company" class="form-control" placeholder="e.g. Nexus Digital Infrastructure" data-fs-field required>
+                            <span data-fs-error="company" style="color: #EF4444; font-size: 0.8rem;"></span>
                         </div>
                     </div>
-
+                
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Corporate Email *</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="d.miller@nexuscap.com" required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="d.miller@nexuscap.com" data-fs-field required>
+                            <span data-fs-error="email" style="color: #EF4444; font-size: 0.8rem;"></span>
                         </div>
                         <div class="form-group">
                             <label for="partnership_type">Partnership Type *</label>
-                            <select id="partnership_type" name="partnership_type" class="form-control" required>
+                            <select id="partnership_type" name="partnership_type" class="form-control" data-fs-field required>
                                 <option value="" disabled selected>Select primary role...</option>
                                 <option value="Developer">Data Centre Developer Partner</option>
                                 <option value="Capital">Development Capital / Fund</option>
@@ -1155,25 +1165,28 @@
                                 <option value="Anchor Tenant">Anchor Tenant / Off-taker</option>
                                 <option value="Adviser / Broker">Adviser / Industry Specialist</option>
                             </select>
+                            <span data-fs-error="partnership_type" style="color: #EF4444; font-size: 0.8rem;"></span>
                         </div>
                     </div>
-
+                
                     <div class="form-group">
                         <label for="power_req">Indicative Capacity Focus</label>
-                        <select id="power_req" name="indicative_power" class="form-control">
+                        <select id="power_req" name="indicative_power" class="form-control" data-fs-field>
                             <option value="Initial 100MW Focus">Phase 1 Target (100MW+ Initial Pathway)</option>
                             <option value="250MW+ Expansion">Phase 2 Target (250MW+ Scaled)</option>
                             <option value="500MW Regional Campus">Phase 3 Target (500MW Campus Hub)</option>
                             <option value="1GW Scale Target">1GW Scale Strategic Vision</option>
                         </select>
+                        <span data-fs-error="indicative_power" style="color: #EF4444; font-size: 0.8rem;"></span>
                     </div>
-
+                
                     <div class="form-group">
                         <label for="message">Scope of Interest / Message *</label>
-                        <textarea id="message" name="message" class="form-control" placeholder="Please outline your organization's capability and strategic objectives for the Goulburn 1GW platform..." required></textarea>
+                        <textarea id="message" name="message" class="form-control" placeholder="Please outline your organization's capability and strategic objectives for the Goulburn 1GW platform..." data-fs-field required></textarea>
+                        <span data-fs-error="message" style="color: #EF4444; font-size: 0.8rem;"></span>
                     </div>
-
-                    <button type="submit" class="btn-submit">Submit Confidential Inquiry</button>
+                
+                    <button type="submit" class="btn-submit" data-fs-submit-btn>Submit Confidential Inquiry</button>
                 </form>
             </div>
         </section>
@@ -1189,6 +1202,17 @@
             </p>
         </div>
     </footer>
-
+    <script>
+          window.formspree =
+            window.formspree ||
+            function () {
+              (formspree.q = formspree.q || []).push(arguments);
+            };
+          formspree("initForm", {
+            formElement: "#my-form",
+            formId: "xyeydkvk",
+          });
+        </script>
+        <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
